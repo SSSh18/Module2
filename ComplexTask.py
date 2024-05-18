@@ -6,7 +6,7 @@ def generate_password(n):
 
     for i in range(1, n):
         for j in range(i, n):
-            if (i + j) % n == 0 and i != j:
+            if n % (i + j) == 0 and i != j:
                 result += str(i) + str(j)
 
     return result
